@@ -1,0 +1,12 @@
+# Core dependencies
+langchain==0.0.274
+langchain-google-genai>=0.0.6
+sentence-transformers>=2.2.2
+chromadb>=0.3.29
+requests>=2.31.0
+gradio>=4.13.0
+python-dotenv>=1.0.0
+
+# Optional: for local development
+ipython>=8.12.0
+notebook>=7.0.0
