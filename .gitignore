@@ -36,3 +36,7 @@ models/
 *.pkl
 logs/
 /data/
+
+data/*
+chroma_db/*
+__pycache__/

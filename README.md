@@ -1,6 +1,29 @@
-# Star Wars RAG Chatbot
+---
+title: Star Wars RAG Chatbot
+emoji: 🚀
+colorFrom: yellow
+colorTo: red
+sdk: gradio
+sdk_version: "4.0.0"
+app_file: app.py
+pinned: false
+---
+
+# 🌌 Star Wars RAG Chatbot
+
+A Retrieval-Augmented Generation chatbot that answers questions about the Star Wars universe using a knowledge base and Gradio interface.
+
+---
+---
 
 A Retrieval-Augmented Generation (RAG) chatbot that answers questions about the Star Wars universe using data from SWAPI (Star Wars API). Built with LangChain, Gemini, and Gradio.
+
+## Notebook
+
+You can view the full Colab notebook with all code, outputs, and explanations here:
+
+[Open Colab Notebook](https://colab.research.google.com/drive/1u7n4n3pa4hPlt86A5W626-POKbiSzJ3b?usp=sharing)
+
 
 ## Project Purpose
 
@@ -158,6 +181,17 @@ The chatbot can be deployed on Hugging Face Spaces or any platform supporting Gr
 ## Deploy Link
 
 Visit the live demo: https://huggingface.co/spaces/MerveAltnsk/star-wars-rag-chatbot
+
+## Web Interface & Usage
+
+The chatbot provides a simple Gradio-based web interface:
+
+1. Type your question in the text box.
+2. Click the **Send** button.
+3. The chatbot will display its answer instantly in the chat window.
+
+You can access the deployed chatbot at: [https://huggingface.co/spaces/MerveAltnsk/star-wars-rag-chatbot](https://huggingface.co/spaces/MerveAltnsk/star-wars-rag-chatbot)
+
 
 ## Future Improvements
 
