@@ -1,28 +1,36 @@
----
-title: Star Wars RAG Chatbot
-emoji: 🚀
-colorFrom: yellow
-colorTo: red
-sdk: gradio
-sdk_version: "4.0.0"
-app_file: app.py
-pinned: false
----
-
 # 🌌 Star Wars RAG Chatbot
 
-A Retrieval-Augmented Generation chatbot that answers questions about the Star Wars universe using a knowledge base and Gradio interface.
+<img src="https://images.steamusercontent.com/ugc/2258055576432666610/F333CDBF79C5E51910C86563B3D8F0D91E717B48/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" width="600" />
+
+A **Retrieval-Augmented Generation (RAG)** chatbot that answers questions about the **Star Wars universe** using structured data from SWAPI (Star Wars API). Built with **LangChain**, **Gemini**, and **Gradio**, this chatbot combines semantic search and generative AI for accurate, lore-consistent responses.  
 
 ---
+
+## 🚀 Project Overview
+
+The Star Wars RAG Chatbot enables users to:
+
+- **Explore Star Wars lore**: Ask questions about characters, films, planets, starships, vehicles, and species.  
+- **Semantic retrieval**: Uses vector embeddings to fetch contextually relevant passages from the knowledge base.  
+- **RAG-powered responses**: Integrates Google's Gemini model for detailed and immersive answers.  
+- **Interactive web interface**: Chat-style interface built with Gradio, accessible via web browser.
+
+> Try asking questions like *"What is the height of Darth Vader?"* or *"Who directed The Empire Strikes Back?"* and get instant answers from the Jedi Archives.
+
 ---
 
-A Retrieval-Augmented Generation (RAG) chatbot that answers questions about the Star Wars universe using data from SWAPI (Star Wars API). Built with LangChain, Gemini, and Gradio.
+## 🖼️ Chat Interface
 
-## Notebook
+<img width="1020" height="519" alt="Image" src="https://github.com/user-attachments/assets/e8b73350-0630-4839-a381-d80b84417366" />
+<img width="1017" height="518" alt="Image" src="https://github.com/user-attachments/assets/958c5543-f53b-4809-87b1-5d6910e3db67" />
+---
 
-You can view the full Colab notebook with all code, outputs, and explanations here:
+## 📓 Notebook
+
+View the full Colab notebook with all code, outputs, and explanations:  
 
 [Open Colab Notebook](https://colab.research.google.com/drive/1u7n4n3pa4hPlt86A5W626-POKbiSzJ3b?usp=sharing)
+
 
 
 ## Project Purpose
@@ -38,16 +46,43 @@ The project serves as both a practical example of modern NLP techniques and an e
 
 ## Dataset Description
 
-The knowledge base is built from the Star Wars API (SWAPI), which provides canonical information about:
+The knowledge base of this project is built primarily from the **Star Wars API (SWAPI)**, a public API providing canonical Star Wars universe information. The dataset contains structured data for the following entities:
 
-- Characters (people)
-- Films
-- Species
-- Vehicles
-- Starships
-- Planets
+### 1. Characters (People)
+- Name, height, mass, hair color, skin color, eye color, birth year, and gender.
+- Examples: Luke Skywalker, Darth Vader, Yoda, Leia Organa.
+- Data captures relationships such as species, homeworld, and appearances in films.
 
-Each entity is processed into text passages that preserve relationships and context, making them suitable for retrieval and question answering.
+### 2. Films
+- Title, episode number, director, producer, release date.
+- Example: *A New Hope*, *The Empire Strikes Back*.
+- This allows the chatbot to answer production-related questions.
+
+### 3. Species
+- Name, classification, designation, average height, average lifespan, language.
+- Example: Wookiees, Ewoks, Humans, Droids.
+
+### 4. Starships
+- Name, model, manufacturer, cost, length, max speed, crew, passengers, cargo capacity.
+- Example: Millennium Falcon, X-wing, Star Destroyer.
+
+### 5. Vehicles
+- Name, model, manufacturer, cost, length, crew, passengers, cargo capacity.
+- Example: Sand Crawler, Speeder Bikes.
+
+### 6. Planets
+- Name, rotation period, orbital period, diameter, climate, gravity, terrain, surface water, population.
+- Example: Tatooine, Alderaan, Hoth, Endor.
+
+### Key Notes
+- All API responses are converted into **natural language text passages** suitable for semantic search.
+- Data preserves entity relationships, e.g., which characters appear in which films or which species belong to which planets.
+- The dataset allows the RAG pipeline to retrieve **contextually relevant passages** for accurate, lore-consistent answers.
+
+### Dataset Size
+- The final dataset includes **hundreds of passages**: all characters, films, species, starships, vehicles, and planets indexed with embeddings.
+- Stored in **Chroma vector database** for fast retrieval using semantic similarity search.
+
 
 ## Methods
 
@@ -159,6 +194,8 @@ pip install -r requirements.txt
 ```bash
 cp .env.template .env
 # Edit .env and add your GOOGLE_API_KEY
+Add GOOGLE_API_KEY to Hugging Face Space secrets for deployment.
+
 ```
 
 5. Run the application
@@ -180,7 +217,8 @@ The chatbot can be deployed on Hugging Face Spaces or any platform supporting Gr
 
 ## Deploy Link
 
-Visit the live demo: https://huggingface.co/spaces/MerveAltnsk/star-wars-rag-chatbot
+The Hugging Face Space for this project is not yet live.  
+You can run the chatbot locally following the [Local Setup](#local-setup) instructions.
 
 ## Web Interface & Usage
 
